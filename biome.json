@@ -49,11 +49,17 @@
 				"noReExportAll": "off",
 				"noBarrelFile": "off"
 			},
+			"security": {
+				"noDangerouslySetInnerHtml": "off"
+			},
 			"suspicious": {
 				"noReactSpecificProps": "off",
 				"noConsole": {
 					"fix": "none",
-					"level": "warn"
+					"level": "warn",
+					"options": {
+						"allow": []
+					}
 				},
 				"noConsoleLog": {
 					"fix": "none",

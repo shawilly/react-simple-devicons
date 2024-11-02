@@ -9,3 +9,4 @@ pre-commit:
       run: pnpm build
     test:
       run: pnpm test:ci
+
