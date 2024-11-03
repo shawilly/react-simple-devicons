@@ -1,3 +1,5 @@
+"use client";
+
 import { type CSSProperties, useCallback, useEffect, useState } from "react";
 import { Loader } from "./components/loader";
 import { type Scale, dimensions } from "./lib/constants/size";
