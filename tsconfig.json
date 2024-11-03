@@ -7,6 +7,6 @@
 		"skipLibCheck": true,
 		"strict": true,
 		"noEmit": true,
-		"types": ["vitest", "@testing-library/jest-dom"] // Change 'jest' to 'vitest'
+		"types": ["vitest", "@testing-library/jest-dom"]
 	}
 }

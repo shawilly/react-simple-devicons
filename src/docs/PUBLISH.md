@@ -8,8 +8,9 @@ Ensure you have:
 
 1. An npm account. You can [create one here](https://www.npmjs.com/signup) if needed.
 2. Logged in to npm in your terminal. Use:
+
    ```bash
-   npm login
+   pnpm login
    ```
 
 ## Build and Publish `simple-react-devicon`
