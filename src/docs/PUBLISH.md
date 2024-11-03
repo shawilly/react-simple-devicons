@@ -1,6 +1,6 @@
-# 📦 Publish `simple-react-devicon` to npm
+# 📦 Publish `react-simple-devicons` to npm
 
-This guide provides instructions to publish the `simple-react-devicon` package to npm.
+This guide provides instructions to publish the `react-simple-devicons` package to npm.
 
 ## Prerequisites
 
@@ -13,11 +13,11 @@ Ensure you have:
    pnpm login
    ```
 
-## Build and Publish `simple-react-devicon`
+## Build and Publish `react-simple-devicons`
 
 1. **Build the package**
 
-   Use `tsup` to bundle `simple-react-devicon` for production:
+   Use `tsup` to bundle `react-simple-devicons` for production:
 
    ```bash
    pnpm build
@@ -44,4 +44,4 @@ Ensure you have:
 - Add an npm token as a GitHub secret if using GitHub Actions for automated publishing.
 - In the GitHub repository settings, enable **"Read & write permissions"** under **Actions** to ensure workflows run smoothly.
 
-Once complete, `simple-react-devicon` will be live on npm!
+Once complete, `react-simple-devicons` will be live on npm!

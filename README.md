@@ -1,28 +1,28 @@
 <p align="center">
-  <a href="https://github.com/shawilly/simple-react-devicon/stargazers"><img src="https://img.shields.io/github/stars/shawilly/simple-react-devicon?colorA=192330&colorB=f8e7b0&style=for-the-badge"></a>
-  <a href="https://github.com/shawilly/simple-react-devicon/issues"><img src="https://img.shields.io/github/issues/shawilly/simple-react-devicon?colorA=192330&colorB=98d4e7&style=for-the-badge"></a>
-  <a href="https://github.com/shawilly/simple-react-devicon/contributors"><img src="https://img.shields.io/github/contributors/shawilly/simple-react-devicon?colorA=192330&colorB=b4e49a&style=for-the-badge"></a>
-  <a href="https://github.com/shawilly/simple-react-devicon/network/members"><img src="https://img.shields.io/github/forks/shawilly/simple-react-devicon?colorA=192330&colorB=bdb2ff&style=for-the-badge"></a>
+  <a href="https://github.com/shawilly/react-simple-devicons/stargazers"><img src="https://img.shields.io/github/stars/shawilly/react-simple-devicons?colorA=192330&colorB=f8e7b0&style=for-the-badge"></a>
+  <a href="https://github.com/shawilly/react-simple-devicons/issues"><img src="https://img.shields.io/github/issues/shawilly/react-simple-devicons?colorA=192330&colorB=98d4e7&style=for-the-badge"></a>
+  <a href="https://github.com/shawilly/react-simple-devicons/contributors"><img src="https://img.shields.io/github/contributors/shawilly/react-simple-devicons?colorA=192330&colorB=b4e49a&style=for-the-badge"></a>
+  <a href="https://github.com/shawilly/react-simple-devicons/network/members"><img src="https://img.shields.io/github/forks/shawilly/react-simple-devicons?colorA=192330&colorB=bdb2ff&style=for-the-badge"></a>
 </p>
 
-# simple-react-devicon
+# react-simple-devicons
 
-`simple-react-devicon` is a React component library for displaying [devicons](https://devicon.dev/) icons as SVGs, offering customizable styles, color, and scaling.
+`react-simple-devicons` is a React component library for displaying [devicons](https://devicon.dev/) icons as SVGs, offering customizable styles, color, and scaling.
 
 ## Installation
 
 To install, use your preferred package manager:
 
 ```bash
-npm install simple-react-devicon
+npm install react-simple-devicons
 ```
 
 ```bash
-pnpm install simple-react-devicon
+pnpm install react-simple-devicons
 ```
 
 ```bash
-yarn add simple-react-devicon
+yarn add react-simple-devicons
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ Import the `DevIcon` component into your React application:
 
 ```tsx
 import React from "react";
-import { DevIcon } from "simple-react-devicon";
+import { DevIcon } from "react-simple-devicons";
 
 export default function App() {
   return (
@@ -77,7 +77,7 @@ The `scale` prop adjusts the icon's dimensions. Here’s a list of predefined si
 
 ```tsx
 import React from "react";
-import { DevIcon } from "simple-react-devicon";
+import { DevIcon } from "react-simple-devicons";
 
 const App = () => {
   return (
@@ -105,7 +105,7 @@ To learn about using Server-Side Rendering with [Next.js](https://nextjs.org/doc
 First, create a component that wraps `DevIcon` (_app/devicon.tsx_):
 
 ```tsx
-import { DevIcon } from "simple-react-devicon";
+import { DevIcon } from "react-simple-devicons";
 
 const DevIcon = () => {
   return <DevIcon />;
