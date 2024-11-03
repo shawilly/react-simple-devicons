@@ -1,6 +1,10 @@
-import { type CSSProperties, useEffect, useState } from "react";
+import { type CSSProperties, useCallback, useEffect, useState } from "react";
+import { Loader } from "./components/loader";
 import { type Scale, dimensions } from "./lib/constants/size";
 import { deviconSvgUrl } from "./lib/devicon-svg-url";
+
+const commonError =
+	" Double check icon availability here: https://devicon.dev/";
 
 export type DevIconProps = {
 	color?: string;
@@ -21,38 +25,68 @@ export function DevIcon(props: DevIconProps) {
 
 	const [svgContent, setSvgContent] = useState<string | null>(null);
 	const [dimension, setDimension] = useState<number>();
+	const [isLoading, setIsLoading] = useState(true);
 
-	useEffect(() => {
+	/**
+	 * Throw error with provided message, set isLoading to false and svgContent to null.
+	 */
+	const throwError = (message: string): void => {
+		setIsLoading(false);
+		setSvgContent(null);
+
+		throw new Error(message + commonError);
+	};
+
+	const handleError = useCallback(throwError, []);
+
+	useEffect((): void => {
+		// Set scale
 		if (props?.scale && dimensions[props.scale]) {
 			setDimension(dimensions[props?.scale]);
 		} else {
 			setDimension(14);
 		}
-	}, [props?.scale]);
 
-	useEffect(() => {
-		const fetchSvg = async () => {
+		// You can't change color of original style
+		if (props?.style?.includes("original") && props?.color) {
+			handleError(
+				"Can't set color of original style. Try line(-woodmark) or plain(-woodmark) styles.",
+			);
+		}
+	}, [props?.color, props?.scale, props?.style, handleError]);
+
+	useEffect((): void => {
+		setIsLoading(true);
+		const fetchSvg = async (): Promise<void> => {
 			try {
 				const response = await fetch(deviconSvgUrl(icon, iconStyle));
 
 				if (!response.ok) {
-					throw new Error(
+					handleError(
 						`Fetch error: Unable to fetch icon '${icon}' with style '${iconStyle}'. HTTP status: ${response.status}`,
 					);
 				}
 
 				const text = await response.text();
+
+				if (!text) {
+					handleError(
+						`No svg text found for icon '${icon}' with style '${iconStyle}'. HTTP status: ${response.status}`,
+					);
+				}
+
 				setSvgContent(text);
+				setIsLoading(false);
 			} catch (e) {
-				throw new Error(`Error fetching the icon: ${(e as Error).message}`);
+				handleError(`Error fetching the icon: ${(e as Error).message}`);
 			}
 		};
 
-		fetchSvg();
-	}, [icon, iconStyle]);
+		fetchSvg(); // Directly call fetchSvg without a try-catch here
+	}, [icon, iconStyle, handleError]);
 
-	if (!svgContent) {
-		return null; // You can also return a loading spinner here
+	if (!(svgContent || isLoading)) {
+		throwError(`Icon '${icon}' with style '${iconStyle}' not found.`);
 	}
 
 	const style: CSSProperties = {
@@ -61,17 +95,20 @@ export function DevIcon(props: DevIconProps) {
 		color: props.color || "inherit", // Use inherit if no color is provided
 	};
 
-	// You can also use regex to replace the color in the SVG directly
-	const svgWithColor = svgContent.replace(
-		/fill="[^"]*"/g,
-		`fill="${props.color || "currentColor"}"`,
-	);
-
-	return (
+	return isLoading || !svgContent ? (
+		<Loader />
+	) : (
 		<div
 			id={`dev-icon-${icon}-${iconStyle}`}
+			data-testid="dev-icon"
 			style={style}
-			dangerouslySetInnerHTML={{ __html: svgWithColor }}
+			// Replace all color values to the provided color
+			dangerouslySetInnerHTML={{
+				__html: svgContent.replace(
+					/fill="[^"]*"/g,
+					`fill="${props.color || "currentColor"}"`,
+				),
+			}}
 		/>
 	);
 }

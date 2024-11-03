@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import { DevIcon } from "../DevIcon";
+import { DevIcon } from "../devicon";
 
 export default {
 	title: "DevIcon",
@@ -13,7 +13,7 @@ const Template: StoryFn<typeof DevIcon> = (args) => <DevIcon {...args} />;
 export const Primary = Template.bind({});
 
 Primary.args = {
-	color: "black",
+	color: "green",
 	icon: "typescript",
 	scale: "xl",
 	style: "original",

@@ -1,3 +1,10 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`renders correctly 1`] = `null`;
+exports[`matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="loader"
+    data-testid="loader"
+  />
+</DocumentFragment>
+`;
