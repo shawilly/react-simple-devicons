@@ -1,5 +1,3 @@
-"use client";
-
 import { type CSSProperties, useCallback, useEffect, useState } from "react";
 import { Loader } from "./components/loader";
 import { type Scale, dimensions } from "./lib/constants/size";
@@ -106,10 +104,12 @@ export function DevIcon(props: DevIconProps) {
 			style={style}
 			// Replace all color values to the provided color
 			dangerouslySetInnerHTML={{
-				__html: svgContent.replace(
-					/fill="[^"]*"/g,
-					`fill="${props.color || "currentColor"}"`,
-				),
+				__html: props?.color
+					? svgContent.replace(
+							/fill="[^"]*"/g,
+							`fill="${props.color || "currentColor"}"`,
+						)
+					: svgContent,
 			}}
 		/>
 	);
