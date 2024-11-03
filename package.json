@@ -2,12 +2,23 @@
 	"name": "simple-react-devicon",
 	"description": "A simple and customizable React component for displaying development icons. This package is built using TypeScript and is designed for easy integration into your React applications, providing a seamless way to showcase your development tools and technologies.",
 	"version": "0.1.3",
-	"author": "",
-	"license": "",
-	"keywords": [],
+	"author": {
+		"name": "Shane Williams",
+		"email": "shane@shawilly.dev"
+	},
+	"license": "MIT",
+	"keywords": [
+		"react",
+		"devicons",
+		"devicon",
+		"development",
+		"tools",
+		"icons",
+		"react-component"
+	],
 	"repository": {
 		"type": "git",
-		"url": ""
+		"url": "https://github.com/shawilly/simple-react-devicon"
 	},
 	"scripts": {
 		"dev": "concurrently \"pnpm build --watch\" \"pnpm storybook\" \"pnpm test\" ",
