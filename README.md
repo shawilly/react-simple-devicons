@@ -1,3 +1,10 @@
+<p align="center">
+  <a href="https://github.com/shawilly/react-simple-devicon/stargazers"><img src="https://img.shields.io/github/stars/shawilly/react-simple-devicon?colorA=192330&colorB=f8e7b0&style=for-the-badge"></a>
+  <a href="https://github.com/shawilly/react-simple-devicon/issues"><img src="https://img.shields.io/github/issues/shawilly/react-simple-devicon?colorA=192330&colorB=98d4e7&style=for-the-badge"></a>
+  <a href="https://github.com/shawilly/react-simple-devicon/contributors"><img src="https://img.shields.io/github/contributors/shawilly/react-simple-devicon?colorA=192330&colorB=b4e49a&style=for-the-badge"></a>
+  <a href="https://github.com/shawilly/react-simple-devicon/network/members"><img src="https://img.shields.io/github/forks/shawilly/react-simple-devicon?colorA=192330&colorB=bdb2ff&style=for-the-badge"></a>
+</p>
+
 # simple-react-devicon
 
 `simple-react-devicon` is a React component library for displaying [devicons](https://devicon.dev/) icons as SVGs, offering customizable styles, color, and scaling.
