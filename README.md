@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="https://github.com/shawilly/react-simple-devicon/stargazers"><img src="https://img.shields.io/github/stars/shawilly/react-simple-devicon?colorA=192330&colorB=f8e7b0&style=for-the-badge"></a>
-  <a href="https://github.com/shawilly/react-simple-devicon/issues"><img src="https://img.shields.io/github/issues/shawilly/react-simple-devicon?colorA=192330&colorB=98d4e7&style=for-the-badge"></a>
-  <a href="https://github.com/shawilly/react-simple-devicon/contributors"><img src="https://img.shields.io/github/contributors/shawilly/react-simple-devicon?colorA=192330&colorB=b4e49a&style=for-the-badge"></a>
-  <a href="https://github.com/shawilly/react-simple-devicon/network/members"><img src="https://img.shields.io/github/forks/shawilly/react-simple-devicon?colorA=192330&colorB=bdb2ff&style=for-the-badge"></a>
+  <a href="https://github.com/shawilly/simple-react-devicon/stargazers"><img src="https://img.shields.io/github/stars/shawilly/simple-react-devicon?colorA=192330&colorB=f8e7b0&style=for-the-badge"></a>
+  <a href="https://github.com/shawilly/simple-react-devicon/issues"><img src="https://img.shields.io/github/issues/shawilly/simple-react-devicon?colorA=192330&colorB=98d4e7&style=for-the-badge"></a>
+  <a href="https://github.com/shawilly/simple-react-devicon/contributors"><img src="https://img.shields.io/github/contributors/shawilly/simple-react-devicon?colorA=192330&colorB=b4e49a&style=for-the-badge"></a>
+  <a href="https://github.com/shawilly/simple-react-devicon/network/members"><img src="https://img.shields.io/github/forks/shawilly/simple-react-devicon?colorA=192330&colorB=bdb2ff&style=for-the-badge"></a>
 </p>
 
 # simple-react-devicon
