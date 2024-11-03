@@ -102,7 +102,7 @@ To learn about using Server-Side Rendering with [Next.js](https://nextjs.org/doc
 
 ### Step 1: Create a Component for `DevIcon`
 
-First, create a component that wraps `DevIcon` (example _app/devicon.tsx_):
+First, create a component that wraps `DevIcon` (_app/devicon.tsx_):
 
 ```tsx
 import { DevIcon } from "simple-react-devicon";
@@ -116,7 +116,7 @@ export default DevIcon;
 
 ### Step 2: Import the Component into Your Pages
 
-Next, import the newly created component into your pages (example: _app/page.tsx_):
+Next, import the newly created component into your pages (_app/page.tsx_):
 
 ```tsx
 import DevIcon from "./DevIcon";
