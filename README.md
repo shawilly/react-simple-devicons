@@ -87,10 +87,50 @@ const App = () => {
 export default App;
 ```
 
+Here’s a revised version of your section on implementing Server-Side Rendering (SSR):
+
+## Implementing Server-Side Rendering (SSR)
+
+To learn about using Server-Side Rendering with [Next.js](https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns), please refer to the official documentation.
+
+### Step 1: Create a Component for `DevIcon`
+
+First, create a component that wraps `DevIcon`:
+
+```tsx
+import { DevIcon } from "simple-react-devicon";
+
+const DevIcon = () => {
+  return <DevIcon />;
+};
+
+export default DevIcon;
+```
+
+````tsx
+### Step 2: Import the  Component into Your Pages
+
+Next, import the newly created component into your pages:
+
+```tsx
+import DevIcon from "./DevIcon";
+
+export default function Page() {
+  return (
+    <div>
+      <p>View Dev Icons</p>
+
+      {/* Works since DevIcon is a Client Component */}
+      <DevIcon />
+    </div>
+  );
+}
+````
+
 ### Error Handling
 
 If an icon or style is unavailable, `DevIcon` throws an error with a message directing you to [devicon.dev](https://devicon.dev/) to confirm icon availability.
 
 ## Acknowledgments
 
-This project was built using the [TypeScript React Package Starter](https://github.com/TimMikeladze/typescript-react-package-starter) as a foundation. Thank you to Tim Mikeladze for providing this helpful starter template!
+This project was built using the [TypeScript React Package Starter](https://github.com/TimMikeladze/typescript-react-package-starter) as a foundation. Thank you to Tim Mikeladze for providing this helpful starter template.
