@@ -90,3 +90,7 @@ export default App;
 ### Error Handling
 
 If an icon or style is unavailable, `DevIcon` throws an error with a message directing you to [devicon.dev](https://devicon.dev/) to confirm icon availability.
+
+## Acknowledgments
+
+This project was built using the [TypeScript React Package Starter](https://github.com/TimMikeladze/typescript-react-package-starter) as a foundation. Thank you to Tim Mikeladze for providing this helpful starter template!
