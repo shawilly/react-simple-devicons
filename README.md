@@ -105,11 +105,9 @@ To learn about using Server-Side Rendering with [Next.js](https://nextjs.org/doc
 First, create a component that wraps `DevIcon` (_app/devicon.tsx_):
 
 ```tsx
-import { DevIcon } from "react-simple-devicons";
+"use client";
 
-const DevIcon = () => {
-  return <DevIcon />;
-};
+import { DevIcon } from "react-simple-devicons";
 
 export default DevIcon;
 ```
@@ -119,7 +117,7 @@ export default DevIcon;
 Next, import the newly created component into your pages (_app/page.tsx_):
 
 ```tsx
-import DevIcon from "./DevIcon";
+import DevIcon from "./devicon";
 
 export default function Page() {
   return (
