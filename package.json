@@ -1,7 +1,7 @@
 {
 	"name": "react-simple-devicons",
 	"description": "A simple and customizable React component for displaying development icons. This package is built using TypeScript and is designed for easy integration into your React applications, providing a seamless way to showcase your development tools and technologies.",
-	"version": "0.1.6",
+	"version": "0.1.7",
 	"author": {
 		"name": "Shane Williams",
 		"email": "shane@shawilly.dev"
